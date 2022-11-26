@@ -3,6 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBhKvf7hn6IB-QJBv8FWxY5RL5Jo0TGhSs",
+  authDomain: "oltweet.firebaseapp.com",
+  projectId: "oltweet",
+  storageBucket: "oltweet.appspot.com",
+  messagingSenderId: "380718909019",
+  appId: "1:380718909019:web:cca322b16bdc4d1519e17e",
+  measurementId: "G-85H74KDY66"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
